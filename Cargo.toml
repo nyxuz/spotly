@@ -1,0 +1,14 @@
+[package]
+name = "spotly"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dbus = "0.9.12"
+mpris = "2.1.0"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1"
+libc = "0.2"
+crossterm = "0.29"
+serde_yaml = "0.9.34"
+ureq = { version = "3.4.0", features = ["json"] }
