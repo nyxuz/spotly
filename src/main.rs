@@ -11,7 +11,7 @@ use mpris::{Metadata, PlaybackStatus, PlayerFinder};
 use clock::PlaybackClock;
 use lyrics::{Lyrics, Track, fetch};
 
-const LYRICS_LEAD: Duration = Duration::from_millis(80);
+const LYRICS_LEAD: Duration = Duration::from_millis(100);
 
 const POSITION_SYNC_INTERVAL: Duration = Duration::from_millis(100);
 
