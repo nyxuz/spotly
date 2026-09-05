@@ -23,7 +23,7 @@ Spotly displays synchronized lyrics directly in your terminal while you listen t
 * Linux
 * Spotify
 * MPRIS support
-* Rust
+* Rust and Cargo
 
 ## Installation
 
@@ -34,6 +34,8 @@ git clone https://github.com/nyxuz/spotly.git
 cd spotly
 cargo install --path . --locked
 ```
+
+> If `spotly` is not found after installation, make sure `$HOME/.cargo/bin` is in your `PATH`.
 
 ## Usage
 
