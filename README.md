@@ -4,36 +4,35 @@ A lightweight terminal Spotify lyrics client written in Rust.
 
 Spotly displays synchronized lyrics directly in your terminal while you listen to music with Spotify.
 
+[![CI](https://github.com/nyxuz/spotly/actions/workflows/ci.yml/badge.svg)](https://github.com/nyxuz/spotly/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/nyxuz/spotly)](LICENSE)
+
 ## Features
 
-- Spotify track detection through MPRIS
-- Synchronized lyrics from LRCLIB
-- Word-by-word lyric display
-- Local playback clock for smoother synchronization
-- Automatic handling of pause, resume, seek, and track changes
-- `♪` fallback when lyrics are unavailable
-- Optional synchronization debug output
-- Lightweight terminal-only interface
+* Spotify track detection through MPRIS
+* Synchronized lyrics from LRCLIB
+* Word-by-word lyric display
+* Local playback clock for smoother synchronization
+* Automatic handling of pause, resume, seek, and track changes
+* `♪` fallback when lyrics are unavailable
+* Optional synchronization debug output
+* Lightweight terminal-only interface
 
 ## Requirements
 
-- Linux
-- Spotify
-- MPRIS support
-- Rust
+* Linux
+* Spotify
+* MPRIS support
+* Rust
 
-## Build
+## Installation
+
+Clone the repository and install Spotly with Cargo:
 
 ```bash
 git clone https://github.com/nyxuz/spotly.git
 cd spotly
-cargo build --release
-```
-
-The compiled binary will be:
-
-```text
-target/release/spotly
+cargo install --path . --locked
 ```
 
 ## Usage
@@ -41,7 +40,7 @@ target/release/spotly
 Start Spotify and play a song, then run:
 
 ```bash
-./target/release/spotly
+spotly
 ```
 
 Press `q` or `Q` to quit.
@@ -51,19 +50,19 @@ Press `q` or `Q` to quit.
 Enable synchronization debugging:
 
 ```bash
-./target/release/spotly --debug
+spotly --debug
 ```
 
 For playback clock diagnostics:
 
 ```bash
-./target/release/spotly --debug-clock
+spotly --debug-clock
 ```
 
 To keep debug output separate from the terminal UI:
 
 ```bash
-./target/release/spotly --debug 2> /tmp/spotly-debug.log
+spotly --debug 2> /tmp/spotly-debug.log
 tail -f /tmp/spotly-debug.log
 ```
 
@@ -71,7 +70,7 @@ tail -f /tmp/spotly-debug.log
 
 Spotly retrieves lyrics from LRCLIB.
 
-Lyrics availability and synchronization accuracy depend on the data provided by LRCLIB. Some tracks may only have plain lyrics or may not have lyrics available.
+Lyrics availability and synchronization accuracy depend on the data provided by LRCLIB. Some tracks may only have plain lyrics, while others may not have lyrics available.
 
 ## Development
 
