@@ -7,7 +7,7 @@ Spotly displays synchronized lyrics directly in your terminal while you listen t
 [![CI](https://github.com/nyxuz/spotly/actions/workflows/ci.yml/badge.svg)](https://github.com/nyxuz/spotly/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/nyxuz/spotly)](LICENSE)
 
-![Spotly screenshot](assets/Spotly.png)
+![Spotly screenshot](assets/screenshot.png)
 
 ## Features
 
